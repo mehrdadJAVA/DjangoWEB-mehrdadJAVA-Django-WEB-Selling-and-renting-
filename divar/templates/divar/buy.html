@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
+    <!-- Custom StyleSheet -->
+    <link rel ="stylesheet" type="text/css" href ="{% static 'home/css/styles.css' %} ">
+    <title>buy</title>
+  </head>
+  <body>
+    <!-- Header -->
+
+
+
+
+    <section class="section rent">
+      <div class="title">
+        <h1>ملک های فروشی</h1>
+        <p>
+فروشی و اجاره های ما فقط در شهر تبریز هست
+        </p>
+      </div>
+
+      <div class="rent-center container">
+        {%for i in buy%}
+
+        <div class="box">
+          <div class="top">
+            <div class="overlay">
+              <img src="{{i.Img_main.url}}" alt="" />
+            </div>
+            <div class="pos">
+              <span>{{i.addes}}</span>
+              <span>فروشی</span>
+            </div>
+          </div>
+          <div class="bottom">
+            <p>متراژ : {{i.LenHome}}</p>
+            <div>
+              <span>قیمت : {{i.Price}}</span>
+             </div>
+             <a href="buydet{{i.id}}"class="btn btn-primary" role="button" >مشاهده</a>
+          </div>
+        </div>
+
+        {%endfor%}
+
+      </section> 
+
+
+  
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col d-flex">
+          <h4>ادرس : تبریز خیابان امام</h4>
+
+
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src = "{% static 'home/js/index.js'  %} " ></script>
+  <script src = "{% static 'home/js/slider.js'  %} " ></script>
+</html>

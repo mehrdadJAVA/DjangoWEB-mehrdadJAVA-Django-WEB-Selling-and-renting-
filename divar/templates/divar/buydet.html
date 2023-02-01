@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa" dir='rtl'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+
+    
+    <!-- Custom StyleSheet -->
+    <link rel ="stylesheet" type="text/css" href ="{% static 'divar/css/sty.css' %} ">
+    <title>rent</title>
+  </head>
+  <body>
+    <!-- Header -->
+
+
+
+
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="{{buy.Img_main.url}}" alt="عکس وارد نشده" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="" alt="عکس وارد نشده"  class="image-list">
+                            <img src="" alt="عکس وارد نشده"  class="image-list">
+                            <img src="" alt="عکس وارد نشده"  class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="breadcrumb">
+                        {% comment %} <span><a href="#">Home</a></span>
+                        <span><a href="#">Product</a></span>
+                        <span class="active">T-shirt</span> {% endcomment %}
+                    </div>
+
+                    <div class="product"><center>
+                        <div class="product-title">
+                            <h2>خیابان {{buy.addes}} </h2>
+                        </div>
+                        <br>    
+                       </center>
+                        <div class="product-details">
+                            <h4>متراژ :  {{buy.LenHome}}</h4>
+                            <h4>طبقه :  {{buy.Floor}}</h4>
+                            <h4>کابینت :  {{kabinet}}</h4>
+                            <h4>اسانسور :  {{asansor}}</h4>
+                            <h4>پارکینگ :  {{parking}}</h4>
+                            <h3>قیمت :  {{price}}</h3>
+                        </div>
+                    
+                        <div class="product-size">
+                            
+                        </div>
+                       
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <h5>شماره تماس : 09149236907</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+
+
+
+
+    
+
+
+  </body>
+  <script src = "{% static 'home/js/jsc.js'  %} " ></script>
+</html>
